@@ -28,7 +28,7 @@ class StudentsController extends Controller
 
         return response()->json([
             'status'=>200,
-            'message'=>'the student successfully insert',
+            'message'=>'Student inserted successfully',
         ]);
     }
     public function edit($id)
@@ -36,7 +36,7 @@ class StudentsController extends Controller
         $student=students::find($id);
         return response()->json([
             'status'=>200,
-            'message'=>'edit student',
+            'message'=>'Student editted successfully',
             'students'=>$student,
         ]);
     }
@@ -51,7 +51,7 @@ class StudentsController extends Controller
 
         return response()->json([
             'status'=>200,
-            'message'=>'the student successfully update',
+            'message'=>'Student updated successfully',
         ]);
     }
     public function delete($id)
@@ -60,7 +60,7 @@ class StudentsController extends Controller
         $student->delete();
         return response()->json([
             'status'=>200,
-            'message'=>'the student delete',
+            'message'=>'Student deleted successfully',
         ]);
     }
 }
